@@ -10,6 +10,7 @@ export const Wrapper = styled.View`
 
 export const Content = styled.View`
   margin-top: -40px;
+  padding-horizontal: 50px;
 `;
 
 export const Image = styled.Image`
