@@ -3,13 +3,17 @@ import React from 'react';
 import { Wrapper, Text, Image, Container } from './styles';
 import DiscordImg from '../../assets/discord.png';
 
-const ButtonIcon: React.FC = () => {
+type Props = {
+  title: string;
+};
+
+const ButtonIcon: React.FC<Props> = ({ title }) => {
   return (
     <Container>
       <Wrapper>
         <Image source={DiscordImg} />
       </Wrapper>
-      <Text>Entrar com Discord</Text>
+      <Text>{title}</Text>
     </Container>
   );
 };
