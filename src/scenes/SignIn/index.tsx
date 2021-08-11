@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 
-// import { Container } from './styles';
+import IllustrationImg from './../../assets/illustration.png';
 
 const SignIn: React.FC = () => {
-  return <View><Text>SignIn</Text></View>
+  return <View><Image source={IllustrationImg} /></View>
 }
 
 export { SignIn };
