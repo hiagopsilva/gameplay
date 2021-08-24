@@ -17,13 +17,12 @@ const SignIn: React.FC = () => {
 
       <Content>
         <Title>
-          Organize {`\n`}
-          suas jogatinas {`\n`}
-          facilmente
+          Conecte-se {'\n'} e organize suas {'\n'}
+          jogatinas
         </Title>
 
         <SubTitle>
-          Crie grupos para jogar seus games {`\n`}
+          Crie grupos para jogar seus games {'\n'}
           favoritos com seus amigos
         </SubTitle>
 
