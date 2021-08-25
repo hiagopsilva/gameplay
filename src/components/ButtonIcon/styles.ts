@@ -15,7 +15,7 @@ export const Wrapper = styled.View`
   height: 56px;
   justify-content: center;
   align-items: center;
-  border-right-width: 1;
+  border-right-width: 1px;
   border-color: ${colors.line};
 `;
 
