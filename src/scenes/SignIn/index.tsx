@@ -1,5 +1,4 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
 
 import IllustrationImg from '../../assets/illustration.png';
 import ButtonIcon from '../../components/ButtonIcon';

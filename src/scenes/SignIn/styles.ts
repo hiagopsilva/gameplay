@@ -5,7 +5,6 @@ export const Wrapper = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: ${colors.secondary90};
 `;
 
 export const Content = styled.View`
