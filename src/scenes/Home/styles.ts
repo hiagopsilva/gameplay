@@ -13,3 +13,7 @@ export const Header = styled.View`
   margin-top: ${getStatusBarHeight() + 26}px;
   margin-bottom: 42px;
 `;
+
+export const WrapperCategorySelect = styled.View`
+  flex: 1;
+`;
