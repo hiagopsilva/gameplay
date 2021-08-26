@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import IllustrationImg from '../../assets/illustration.png';
-import ButtonIcon from '../../components/ButtonIcon';
+import { ButtonIcon } from '../../components/ButtonIcon';
 import { Wrapper, Content, Image, Title, SubTitle } from './styles';
 
 const SignIn: React.FC = () => {

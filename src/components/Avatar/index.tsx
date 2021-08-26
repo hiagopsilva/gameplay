@@ -17,4 +17,4 @@ const Avatar: React.FC<Props> = urlImage => {
   );
 };
 
-export default Avatar;
+export { Avatar };

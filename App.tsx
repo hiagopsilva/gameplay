@@ -8,7 +8,7 @@ import {
 } from '@expo-google-fonts/rajdhani';
 import AppLoading from 'expo-app-loading';
 
-import Background from './src/components/Background';
+import { Background } from './src/components/Background';
 import { Routes } from './src/routes';
 
 export const App = () => {

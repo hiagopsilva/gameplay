@@ -19,4 +19,4 @@ const ButtonIcon: React.FC<Props> = ({ title, ...rest }) => {
   );
 };
 
-export default ButtonIcon;
+export { ButtonIcon };

@@ -10,4 +10,4 @@ const Background: React.FC<Props> = ({ children }) => {
   return <LinearGradient>{children}</LinearGradient>;
 };
 
-export default Background;
+export { Background };
