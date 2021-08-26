@@ -8,11 +8,10 @@ import {
 } from '@expo-google-fonts/rajdhani';
 import AppLoading from 'expo-app-loading';
 
-import { SignIn } from './src/scenes/SignIn';
 import Background from './src/components/Background';
-import Home from './src/scenes/Home';
+import { Routes } from './src/routes';
 
-export default function App() {
+export const App = () => {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_500Medium,
@@ -31,8 +30,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {/* <SignIn /> */}
-      <Home />
+      <Routes />
     </Background>
   );
-}
+};
+
+export default App;
