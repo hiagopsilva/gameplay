@@ -1,10 +1,10 @@
 import React from 'react';
-import { TouchableOpacityProps } from 'react-native';
+import { RectButtonProps } from 'react-native-gesture-handler';
 
 import { Wrapper, Text, Image, Container } from './styles';
 import DiscordImg from '../../assets/discord.png';
 
-type Props = TouchableOpacityProps & {
+type Props = RectButtonProps & {
   title: string;
 };
 

@@ -27,11 +27,7 @@ const SignIn: React.FC = () => {
           favoritos com seus amigos
         </SubTitle>
 
-        <ButtonIcon
-          title="Entrar com Discord"
-          activeOpacity={0.7}
-          onPress={handleSignIn}
-        />
+        <ButtonIcon title="Entrar com Discord" onPress={handleSignIn} />
       </Content>
     </Wrapper>
   );
