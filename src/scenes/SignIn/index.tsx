@@ -1,10 +1,17 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import IllustrationImg from '../../assets/illustration.png';
 import ButtonIcon from '../../components/ButtonIcon';
 import { Wrapper, Content, Image, Title, SubTitle } from './styles';
 
 const SignIn: React.FC = () => {
+  const navigation = useNavigation();
+
+  const handleSignIn = () => {
+    navigation.navigate('Home');
+  };
+
   return (
     <Wrapper>
       <Image source={IllustrationImg} resizeMode="stretch" />
@@ -20,7 +27,11 @@ const SignIn: React.FC = () => {
           favoritos com seus amigos
         </SubTitle>
 
-        <ButtonIcon title="Entrar com Discord" activeOpacity={0.7} />
+        <ButtonIcon
+          title="Entrar com Discord"
+          activeOpacity={0.7}
+          onPress={handleSignIn}
+        />
       </Content>
     </Wrapper>
   );
