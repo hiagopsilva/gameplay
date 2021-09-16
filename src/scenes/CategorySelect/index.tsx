@@ -7,9 +7,14 @@ import { Category } from '../../components/Category';
 type Props = {
   categorySelected: string;
   setCategory: (categoryId: string) => void;
+  hasCheckBox?: boolean;
 };
 
-const CategorySelect: React.FC<Props> = ({ categorySelected, setCategory }) => {
+const CategorySelect: React.FC<Props> = ({
+  categorySelected,
+  setCategory,
+  hasCheckBox = false,
+}) => {
   return (
     <Container>
       {categories.map(category => (
@@ -19,6 +24,7 @@ const CategorySelect: React.FC<Props> = ({ categorySelected, setCategory }) => {
           icon={category.icon}
           checked={category.id === categorySelected}
           onPress={() => setCategory(category.id)}
+          hasCheckBox={hasCheckBox}
         />
       ))}
     </Container>

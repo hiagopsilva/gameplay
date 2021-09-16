@@ -15,7 +15,7 @@ const Category: React.FC<Props> = ({
   title,
   icon: Icon,
   checked = false,
-  hasCheckBox = true,
+  hasCheckBox = false,
   ...rest
 }) => {
   return (
