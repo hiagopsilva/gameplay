@@ -1,7 +1,8 @@
 import styled from 'styled-components/native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { Background } from '../../components/Background';
 
-export const Wrapper = styled.View`
+export const Wrapper = styled(Background)`
   flex: 1;
 `;
 

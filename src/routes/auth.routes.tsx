@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
+import { colors } from '../global/styles/theme';
+
 import { Home } from '../scenes/Home';
 import { SignIn } from '../scenes/SignIn';
 
@@ -12,7 +14,7 @@ const AuthRoutes: React.FC = () => {
       headerMode="none"
       screenOptions={{
         cardStyle: {
-          backgroundColor: 'transparent',
+          backgroundColor: colors.secondary100,
         },
       }}
     >
