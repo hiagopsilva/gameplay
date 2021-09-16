@@ -5,6 +5,7 @@ import { colors } from '../global/styles/theme';
 
 import { Home } from '../scenes/Home';
 import { SignIn } from '../scenes/SignIn';
+import AppointmentDetails from '../components/AppointmentDetails';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -20,6 +21,7 @@ const AuthRoutes: React.FC = () => {
     >
       <Screen name="SignIn" component={SignIn} />
       <Screen name="Home" component={Home} />
+      <Screen name="AppointmentDetails" component={AppointmentDetails} />
     </Navigator>
   );
 };
