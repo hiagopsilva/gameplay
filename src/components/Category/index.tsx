@@ -2,31 +2,33 @@ import React from 'react';
 import { RectButtonProps } from 'react-native-gesture-handler';
 import { SvgProps } from 'react-native-svg';
 
-import { RectButton, LinearGradient, Content, Checked, Title } from './styles';
+import { Container, WrapperGradient, Content, Checked, Title } from './styles';
 
 type Props = RectButtonProps & {
   title: string;
   icon: React.FC<SvgProps>;
   checked?: boolean;
+  hasCheckBox?: boolean;
 };
 
 const Category: React.FC<Props> = ({
   title,
   icon: Icon,
   checked = false,
+  hasCheckBox = true,
   ...rest
 }) => {
   return (
-    <RectButton {...rest}>
-      <LinearGradient>
+    <Container {...rest}>
+      <WrapperGradient>
         <Content checked={checked}>
-          <Checked checked={checked} />
+          {hasCheckBox && <Checked checked={checked} />}
           <Icon />
 
           <Title>{title}</Title>
         </Content>
-      </LinearGradient>
-    </RectButton>
+      </WrapperGradient>
+    </Container>
   );
 };
 
