@@ -14,6 +14,14 @@ export const Header = styled.View`
   margin-bottom: 42px;
 `;
 
-export const WrapperCategorySelect = styled.View`
-  flex: 1;
+export const WrapperCategorySelect = styled.View``;
+
+export const Content = styled.View`
+  margin-top: 42px;
+`;
+
+export const List = styled.FlatList`
+  margin-top: 24px;
+  margin-left: 24px;
+  height: 100%;
 `;
