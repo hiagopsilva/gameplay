@@ -1,7 +1,8 @@
 import styled from 'styled-components/native';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { Fontisto } from '@expo/vector-icons';
-import { ImageBackground } from 'react-native';
+import { FlatList, ImageBackground } from 'react-native';
+import { ListHeader } from '../ListHeader';
 
 import { colors, fonts } from '../../global/styles/theme';
 
@@ -22,6 +23,7 @@ export const ShareIcon = styled(Fontisto).attrs({
 export const Banner = styled(ImageBackground)`
   width: 100%;
   height: 234px;
+  margin-bottom: 30px;
 `;
 
 export const BannerContent = styled.View`
@@ -41,4 +43,12 @@ export const SubTitle = styled.Text`
   font-size: 13px;
   font-family: ${fonts.text400};
   color: ${colors.heading};
+`;
+
+export const ListHeaderStyled = styled(ListHeader)``;
+
+export const List = styled(FlatList)`
+  height: 100%;
+  margin-left: 24px;
+  margin-top: 27px;
 `;

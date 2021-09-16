@@ -9,10 +9,28 @@ import {
   Title,
   SubTitle,
   BannerContent,
+  ListHeaderStyled,
+  List,
 } from './styles';
 import ImgBanner from '../../assets/banner.png';
+import Member from '../Member';
+import ListDivider from '../ListDivider';
 
 const AppointmentDetails: React.FC = () => {
+  const members = [
+    {
+      id: '1',
+      username: 'Rodrigo',
+      avatar_url: 'https://github.com/rodrigorgtic.png',
+      status: 'online',
+    },
+    {
+      id: '2',
+      username: 'Hiago',
+      avatar_url: 'https://github.com/hiagopsilva.png',
+      status: 'offline',
+    },
+  ];
   return (
     <Container>
       <Header
@@ -32,6 +50,15 @@ const AppointmentDetails: React.FC = () => {
           </SubTitle>
         </BannerContent>
       </Banner>
+
+      <ListHeaderStyled title="Jogadores" subtitle="total 3" />
+
+      <List
+        data={members}
+        keyExtractor={item => item.id}
+        renderItem={({ item }) => <Member data={item} />}
+        ItemSeparatorComponent={() => <ListDivider />}
+      />
     </Container>
   );
 };
