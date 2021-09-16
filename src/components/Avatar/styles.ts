@@ -19,7 +19,7 @@ export const LinearGradient = styled(LinearGradientModules).attrs({
 `;
 
 export const Image = styled.Image`
-  width: 46px;
-  height: 46px;
+  width: 53px;
+  height: 53px;
   border-radius: 8px;
 `;

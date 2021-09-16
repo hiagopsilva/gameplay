@@ -1,17 +1,16 @@
 import React from 'react';
 
 import { Container, LinearGradient, Image } from './styles';
-import Logo from '../../assets/banner.png';
 
 type Props = {
-  urlImage?: string;
+  urlImage: string;
 };
 
-const Avatar: React.FC<Props> = urlImage => {
+const Avatar: React.FC<Props> = ({ urlImage }) => {
   return (
     <Container>
       <LinearGradient>
-        <Image source={Logo} />
+        <Image source={{ uri: urlImage }} />
       </LinearGradient>
     </Container>
   );

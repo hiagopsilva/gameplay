@@ -7,7 +7,7 @@ import { Container, WrapperUser, Greeting, Username, Message } from './styles';
 const Profile: React.FC = () => {
   return (
     <Container>
-      <Avatar />
+      <Avatar urlImage="https://github.com/hiagopsilva.png" />
       <View>
         <WrapperUser>
           <Greeting>Olá,</Greeting>
