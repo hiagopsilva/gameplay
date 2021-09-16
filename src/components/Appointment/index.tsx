@@ -1,10 +1,31 @@
 import React from 'react';
 import { RectButtonProps } from 'react-native-gesture-handler';
-import { GuildIcon } from '../GuildIcon';
+import { categories } from '../../utils/categories';
+import PlayerSVG from '../../assets/player.svg';
+import CalendarSVG from '../../assets/calendar.svg';
 
-import { Container, Wrapper } from './styles';
+import {
+  Container,
+  Wrapper,
+  Content,
+  Header,
+  Title,
+  Category,
+  WrapperPlayerInfo,
+  GuildIconStyled,
+  TextPlayer,
+  Footer,
+  WrapperDateInfo,
+  TextDate,
+} from './styles';
+import { colors } from '../../global/styles/theme';
 
-export type GuildProps = {};
+export type GuildProps = {
+  id: string;
+  name: string;
+  icon: null;
+  owner: boolean;
+};
 
 export type AppointmentProps = {
   id: string;
@@ -19,12 +40,40 @@ type Props = RectButtonProps & {
 };
 
 const Appointment: React.FC<Props> = ({ data, ...rest }) => {
+  const [category] = categories.filter(item => item.id === data.category);
+  const { owner } = data.guild;
+  const { primary, on } = colors;
+
   return (
-    <Container {...rest}>
-      <Wrapper>
-        <GuildIcon />
-      </Wrapper>
-    </Container>
+    <Wrapper {...rest}>
+      <Container>
+        <GuildIconStyled />
+
+        <Content>
+          <Header>
+            <Title>{data.guild.name}</Title>
+
+            <Category>{category.title}</Category>
+          </Header>
+
+          <Footer>
+            <WrapperDateInfo>
+              <CalendarSVG />
+
+              <TextDate>{data.date}</TextDate>
+            </WrapperDateInfo>
+
+            <WrapperPlayerInfo>
+              <PlayerSVG fill={owner ? primary : on} />
+
+              <TextPlayer color={owner ? primary : on}>
+                {owner ? 'Anfitrião' : 'Visitante'}
+              </TextPlayer>
+            </WrapperPlayerInfo>
+          </Footer>
+        </Content>
+      </Container>
+    </Wrapper>
   );
 };
 
