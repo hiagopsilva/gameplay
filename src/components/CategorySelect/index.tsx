@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from './styles';
 import { categories } from '../../utils/categories';
-import { Category } from '../../components/Category';
+import { Category } from '../Category';
 
 type Props = {
   categorySelected: string;
