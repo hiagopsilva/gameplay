@@ -24,9 +24,23 @@ import {
   Footer,
 } from './styles';
 import { TextArea } from '../TextArea';
+import { ModalView } from '../ModalView';
+import { Guilds } from '../../scenes/Guilds';
+import { GuildProps } from '../Guild';
 
 const AppointmentCreate: React.FC = () => {
   const [category, setCategory] = useState('');
+  const [openGuildsModal, setOpenGuildsModal] = useState(false);
+  const [guild, setGuild] = useState<GuildProps>({} as GuildProps);
+
+  const handleOpenGuilds = () => {
+    setOpenGuildsModal(true);
+  };
+
+  const handleGuildSelect = (guildSelect: GuildProps) => {
+    setGuild(guildSelect);
+    setOpenGuildsModal(false);
+  };
 
   return (
     <KeyboardAvoidingView
@@ -45,15 +59,14 @@ const AppointmentCreate: React.FC = () => {
         </View>
 
         <Form>
-          <RectButton>
+          <RectButton onPress={handleOpenGuilds}>
             <Select>
-              {
-                // <Image />
-                <GuildIcon />
-              }
+              {guild.icon ? <GuildIcon /> : <Image />}
 
               <SelectBody>
-                <Label>Selecione um servidor</Label>
+                <Label>
+                  {guild.name ? guild.name : 'Selecione um servidor'}
+                </Label>
               </SelectBody>
 
               <IconArrowRight />
@@ -98,6 +111,10 @@ const AppointmentCreate: React.FC = () => {
           </Footer>
         </Form>
       </ScrollViewStyled>
+
+      <ModalView visible={openGuildsModal}>
+        <Guilds handleGuildsSelect={handleGuildSelect} />
+      </ModalView>
     </KeyboardAvoidingView>
   );
 };
