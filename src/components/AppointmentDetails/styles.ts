@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { Fontisto } from '@expo/vector-icons';
 import { FlatList, ImageBackground } from 'react-native';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 import { ListHeader } from '../ListHeader';
 
 import { colors, fonts } from '../../global/styles/theme';
@@ -51,4 +52,9 @@ export const List = styled(FlatList)`
   height: 100%;
   margin-left: 24px;
   margin-top: 27px;
+`;
+
+export const Footer = styled.View`
+  padding: 20px 24px;
+  margin-bottom: ${getBottomSpace()}px;
 `;

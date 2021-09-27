@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../Header';
+import { Header } from '../Header';
 
 import {
   Container,
@@ -11,10 +11,12 @@ import {
   BannerContent,
   ListHeaderStyled,
   List,
+  Footer,
 } from './styles';
 import ImgBanner from '../../assets/banner.png';
 import Member from '../Member';
-import ListDivider from '../ListDivider';
+import { ListDivider } from '../ListDivider';
+import { ButtonIcon } from '../ButtonIcon';
 
 const AppointmentDetails: React.FC = () => {
   const members = [
@@ -59,6 +61,10 @@ const AppointmentDetails: React.FC = () => {
         renderItem={({ item }) => <Member data={item} />}
         ItemSeparatorComponent={() => <ListDivider />}
       />
+
+      <Footer>
+        <ButtonIcon title="Entrar na partida" />
+      </Footer>
     </Container>
   );
 };

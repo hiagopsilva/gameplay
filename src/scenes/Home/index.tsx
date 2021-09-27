@@ -3,11 +3,10 @@ import { useNavigation } from '@react-navigation/native';
 import { Appointment } from '../../components/Appointment';
 
 import { ButtonAdd } from '../../components/ButtonAdd';
-import ListDivider from '../../components/ListDivider';
+import { ListDivider } from '../../components/ListDivider';
 import { ListHeader } from '../../components/ListHeader';
 import { Profile } from '../../components/Profile';
-
-import { CategorySelect } from '../CategorySelect';
+import { CategorySelect } from '../../components/CategorySelect';
 
 import {
   Wrapper,
@@ -79,6 +78,9 @@ const Home: React.FC = () => {
   const handleAppointmentDetails = () => {
     navigation.navigate('AppointmentDetails');
   };
+  const handleAppointmentCreate = () => {
+    navigation.navigate('AppointmentCreate');
+  };
 
   const handleCategorySelect = (categoryId: string) => {
     categoryId === category ? setCategory('') : setCategory(categoryId);
@@ -88,7 +90,7 @@ const Home: React.FC = () => {
     <Wrapper>
       <Header>
         <Profile />
-        <ButtonAdd />
+        <ButtonAdd onPress={handleAppointmentCreate} />
       </Header>
 
       <WrapperCategorySelect>

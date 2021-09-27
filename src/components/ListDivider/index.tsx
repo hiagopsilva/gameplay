@@ -6,4 +6,4 @@ const ListDivider: React.FC = () => {
   return <Container />;
 };
 
-export default ListDivider;
+export { ListDivider };
