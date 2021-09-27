@@ -17,6 +17,12 @@ const Guilds: React.FC<Props> = ({ handleGuildsSelect }) => {
       icon: 'image.png',
       owner: true,
     },
+    {
+      id: '2',
+      name: 'Lendários',
+      icon: 'image.png',
+      owner: true,
+    },
   ];
   return (
     <Container>
