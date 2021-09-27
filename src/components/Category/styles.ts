@@ -42,7 +42,7 @@ export const Title = styled.Text`
   font-family: ${fonts.title700};
   color: ${colors.heading};
   font-size: 15px;
-  margin-top: 19px;
+  margin-top: 15px;
 `;
 
 export const Checked = styled.View`
