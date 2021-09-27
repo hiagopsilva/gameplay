@@ -4,6 +4,10 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { colors, fonts } from '../../global/styles/theme';
 
+type Props = {
+  checked?: boolean;
+};
+
 export const Container = styled(RectButtonModules)``;
 
 export const WrapperGradient = styled(LinearGradient).attrs({
@@ -19,13 +23,13 @@ export const WrapperGradient = styled(LinearGradient).attrs({
   margin-right: 8px;
 `;
 
-export const Content = styled(LinearGradient).attrs(props => ({
+export const Content = styled(LinearGradient).attrs((props: Props) => ({
   colors: [
     props.checked ? colors.secondary85 : colors.secondary50,
     colors.secondary40,
   ],
 }))`
-  opacity: ${props => (props.checked ? 1 : 0.5)};
+  opacity: ${(props: Props) => (props.checked ? 1 : 0.5)};
   width: 100px;
   height: 116px;
   border-radius: 8px;
@@ -38,16 +42,17 @@ export const Title = styled.Text`
   font-family: ${fonts.title700};
   color: ${colors.heading};
   font-size: 15px;
+  margin-top: 19px;
 `;
 
 export const Checked = styled.View`
-  width: ${props => (props.checked ? 12 : 14)}px;
-  height: ${props => (props.checked ? 12 : 14)}px;
-  background-color: ${props =>
+  width: ${(props: Props) => (props.checked ? 12 : 14)}px;
+  height: ${(props: Props) => (props.checked ? 12 : 14)}px;
+  background-color: ${(props: Props) =>
     props.checked ? colors.primary : colors.secondary100};
   border-color: ${colors.secondary50};
   border-width: 2px;
-  border-radius: ${props => (props.checked ? 3 : 5)}px;
+  border-radius: ${(props: Props) => (props.checked ? 3 : 5)}px;
   position: absolute;
   top: 8px;
   right: 8px;
